@@ -1,0 +1,16 @@
+"input_text","output_text"
+"A 3-stage RC high-pass filter implemented as an RC ladder network with the output taken at n2 and a resistive load at the output. It is powered by a 3.3V DC source. The filter type is high-pass. The network has 3 stage(s) connected in cascade. Stage 1 uses R1=1k and C1=2.2u. Stage 2 uses R2=47k and C2=47n. Stage 3 uses R3=1k and C3=10u. The load resistor is RL=47k.","V1 in 0 DC 3.3
+C1 in n1 2.2u
+R1 n1 0 1k
+C2 n1 n2 47n
+R2 n2 0 47k
+C3 n2 out 10u
+R3 out 0 1k
+RL n2 0 47k
+.end"
+"A feedback circuit based on an RC network powered by a 3.3V DC source. The main path is a low-pass RC stage. The feedback is implemented using a resistive-capacitive feedback network, from node out to node n1.","V1 in 0 DC 3.3
+R1 in n1 47k
+C1 n1 0 100n
+Rf out nf 1k
+Cf nf n1 47n
+.end"
